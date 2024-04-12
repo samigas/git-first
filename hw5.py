@@ -26,6 +26,8 @@ def read_number(num):
     X = read_single_digit(num[0:1])
     Y = read_single_digit(num[1:2])
     Z = read_single_digit(num[2:3])
-    return print(f'{X} {Y} {Z}')
-    
-read_number(number)
+    T = X + Y + Z
+    return T
+
+Rnum = read_number(number)
+print(f'{Rnum}')
