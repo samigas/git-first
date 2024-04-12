@@ -22,14 +22,10 @@ def read_single_digit(Num):
 
 number = input('세자리 정수를 입력하세요')
 
-Fi = number[0:1]
-Se = number[1:2]
-Th = number[2:3]
-
-def read_number():
-    X = read_single_digit(Fi)
-    Y = read_single_digit(Se)
-    Z = read_single_digit(Th)
+def read_number(num):
+    X = read_single_digit(num[0:1])
+    Y = read_single_digit(num[1:2])
+    Z = read_single_digit(num[2:3])
     return print(f'{X} {Y} {Z}')
     
-read_number()
+read_number(number)
