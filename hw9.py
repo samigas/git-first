@@ -4,29 +4,25 @@ class Rectangle:
         self.__y1 = y1
         self.__x2 = x2
         self.__y2 = y2
-        self.__lt = (self.__x1, self.__y2)
-        self.__rb = (self.__x2, self.__y2)
-        
 
     def show(self):
-        print(f'좌측 상단 꼭지점이 {self.__lt}이고 우측 하단 꼭지점이 {self.__rb}인 사각형입니다.', end = ' ')
+        print(f' 좌측상단 꼭지점이 ({self.__x1}, {self.__y1})이고 우측 하단 꼭지점이 ({self.__x2}, {self.__y2})인 사각형입니다.')
 
-    def getWidth(self, x1 ,x2):
-        Width = self.__x2 - self.__x1
+    def getWidth(self):
+        Width = self.__y2 - self.__y1
         return Width
 
-    def getHeight(self, y1, y2):
-        Height = self.__y2 - self.__y1
+    def getHeight(self):
+        Height = self.__x2 - self.__x1
         return Height
-        
+
     def getArea(self):
-        Area = (self.__x2 - self.__x1) * (self.__y2 - self.__y1)
+        Area = self.getWidth() * self.getHeight()
         return Area
 
     def getPerimeter(self):
-        perimeter = ((self.__x2 - self.__x1) * 2) + ((self.__y2 - self.__y1) * 2)
-        return perimeter
-
+        Perimeter = (self.getHeight() * 2) + (self.getWidth() * 2)
+        return Perimeter
 
 r1 = Rectangle(5, 5, 20, 10)
 a = r1.getArea()
